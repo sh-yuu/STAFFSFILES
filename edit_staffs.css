@@ -1,0 +1,240 @@
+:root{
+    --nav-bg-color--:#EEEBDD;
+    --nav-button-bgcolor--:#810000;;
+    --table-td-bg-color--:#dbdad2;
+}
+
+
+.edit_wrapper {
+    background-color: var(--nav-bg-color--);
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    z-index: 1000;
+    border: 1px solid black;                                                          
+    top: 0;
+    left: 0;
+    transform: translate(70%, 50%);
+    flex-wrap: wrap;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 15px;
+  
+}
+
+.edit_wrapper div{
+    height: 100%;
+}
+
+
+.edit_wrapper form div{
+    width: 95%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.edit_wrapper form div label{
+    margin-left: 2%;
+}
+
+.form_wrapper{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    color: var(--nav-button-bgcolor--);
+}
+
+
+
+
+.name_input{
+    height: 60%;
+    width: 80%;
+    padding: 1%;
+    color: var(--nav-button-bgcolor--);
+}
+.age_input{
+    height: 60%;
+    width: 80%;
+    padding: 1%;
+    color: var(--nav-button-bgcolor--);
+
+}
+.edit_wrapper form div select{
+    height: 60%;
+    width: 80%;
+    padding: 1%;
+    color: var(--nav-button-bgcolor--);
+    font-weight: bolder;
+}
+
+.saveclose_wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    height: 10%;
+    align-items: center;
+
+}
+.saveclose_wrapper > button{
+    padding: 6%;
+    margin-left: 2%;
+    height: 80%;
+    width: 40%;
+    background-color: var(--nav-button-bgcolor--);
+    color: var(--nav-bg-color--);
+    font-weight: bolder;
+    border: none;
+    border-radius: 30px;
+}
+.current_info_wrapper{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: bolder;
+    color: var(--nav-button-bgcolor--);
+}
+.current_info_wrapper div{
+    width: 90%;
+    height: 75%;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.current_info_wrapper h2{
+    width: 100%;
+    text-align: left;
+    font-size: 40px;
+}
+
+.current_info_wrapper h3{
+    font-size: 30px;
+    width: 100%;
+    text-align: left;
+}
+
+
+
+label svg{
+    height: 70%;
+    width: 70%;
+}
+
+
+/* Phone*/
+
+@media screen and (max-width: 767px) {
+
+    .edit_wrapper {
+        transform: translate(85%,50%);
+
+    }
+    .form_wrapper{
+        width: 100%;
+        height: 100%;
+    }
+    .current_info_wrapper{
+        width: 100%;
+        height: 100%;
+    }
+
+    .current_info_wrapper h2{
+        font-size: 25px;
+    }
+    
+    .current_info_wrapper h3{
+        font-size: 20px;
+    }
+    
+
+    .edit_wrapper form{
+        width: 100%;
+    }
+
+    .img_wrapper{
+        width: 100%;
+
+    }
+
+    .img_wrapper img{
+        height: 30%;
+
+    }
+    
+    
+}
+
+
+@media screen and (min-width: 768px) and  (max-width: 1280px)  {
+
+    .edit_wrapper {
+        transform: translate(85%,50%);
+    }
+
+    .edit_wrapper form{
+        width: 100%;
+    }
+
+    .img_wrapper{
+        width: 100%;
+
+    }
+
+    .img_wrapper img{
+        height: 30%;
+
+    }
+
+    .current_info_wrapper h2{
+        font-size: 30px;
+    }
+    
+    .current_info_wrapper h3{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 932px) and (orientation:landscape){
+
+    .edit_wrapper {
+        transform: translate(85%,50%);
+       
+    }
+
+    .edit_wrapper form{
+        width: 100%;
+        min-height: 330px;
+    }
+
+    .img_wrapper{
+        width: 100%;
+
+    }
+
+    .img_wrapper img{
+        height: 30%;
+
+    }
+
+}
+
+@media screen and (min-width: 933px) and  (max-width: 1280px)  and (orientation:landscape) {
+
+    nav > div:last-child button{
+    width: 40%;
+    }
+
+    nav > div:not(:first-child,:last-child) svg{
+        width: 10%;
+    }
+
+}

@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    --nav-bg-color--:#EEEBDD;
+    --nav-button-bgcolor--:#810000;;
+    --table-td-bg-color--:#dbdad2;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    font-family: "Open Sans", sans-serif;
+    overflow: hidden;
+    
+}
+
+
+nav{
+    
+    height: 100%;
+    width: 10%;
+    background-color: var(--nav-bg-color--);
+    overflow: hidden;
+
+}
+
+nav > div{
+    display: flex;
+    
+   justify-content: center;
+   align-items: center;
+ 
+}
+
+nav > :first-child{
+    width: 100%;
+    height: 12%;
+   
+
+}
+nav > div:not(:first-child){
+   
+    height: 5%;
+    width: 100%;
+    color: var(--nav-button-bgcolor--);
+    display: flex;
+    font-size: 50%;
+
+}
+
+nav > div:not(:first-child,:last-child){
+   
+    cursor: pointer;
+ 
+ }
+
+nav > div:not(:first-child) > svg{
+    width: 15%;
+    padding: 2%;
+
+}
+
+nav > div:nth-child(4){
+    background-color: var(--nav-button-bgcolor--);
+    color: var(--nav-bg-color--);
+}
+
+nav > div:not(:first-child) > h1{
+    width: 65%;
+}
+
+nav > div:not(:first-child,:last-child,:nth-child(4)):hover{  
+  background-color: var(--table-td-bg-color--);
+}
+
+nav > :last-child button{
+
+   width: 70%;
+   height: 80%;
+   border-radius: 30px;
+   border: none;
+   background-color:var(--nav-button-bgcolor--) ;
+   color: var(--nav-bg-color--);
+   font-family: "Open Sans", sans-serif;
+   font-weight: bolder;
+   font-size: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+
+nav > :last-child button > svg{
+
+    width: 30%;
+}
+
+nav > :last-child button:active{
+    background-color:var(--nav-bg-color--) ;
+    color: var(--nav-button-bgcolor--);
+    outline: 1px solid var(--nav-button-bgcolor--);   
+ }
+
+.logo_wrapper img{
+    height: 50%;
+}
+
+
+main{
+    background-color: var(--nav-bg-color--);
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/*---------------------*/
+.page_title{
+    width: 100%;
+   
+    height: 5%;
+    display: grid;
+    place-items: center;
+}
+
+.content_wrapper{
+    height: 95%;
+    width: 100%;
+    position: relative;
+
+
+
+
+}
+
+.content_wrapper form{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+    
+    
+
+}
+
+.content_wrapper form input,.content_wrapper form select{
+    outline: none;
+    border: none;
+    background-color: var(--nav-bg-color--);
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    color: var(--nav-button-bgcolor--);
+
+ 
+  
+}
+
+.content_wrapper form input[type="file"]::-webkit-file-upload-button{
+   background-color:var(--nav-button-bgcolor--);
+   color: var(--nav-bg-color--);   
+    
+}
+.option_wrapper select{ 
+    
+    
+    color: var(--nav-button-bgcolor--);
+    font-weight: bolder;
+
+    width: 100%;
+
+}
+
+.content_wrapper form > div{
+    width: 18%;
+    height: 80%;
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    background-color: var(--nav-button-bgcolor--);
+    color: var(--nav-bg-color--);
+    outline: 2px solid var(--nav-button-bgcolor--);
+ 
+    position: relative;
+}
+
+.content_wrapper form > div:last-child{
+    justify-content: center;
+    background-color:transparent;
+    outline: none;
+    
+}
+
+.content_wrapper form > div label{
+    font-size: 90%;
+    font-weight: bolder;
+    padding: 2%;
+   
+    text-justify: center;
+   
+}
+
+.content_wrapper form > div input[type="submit"]{
+    height: 100%;
+    width: 100%;
+    border-radius: 40px;
+    padding: 0;
+    margin: 0;
+    background-color: var(--nav-button-bgcolor--);
+    color: var(--nav-bg-color--);
+    font-weight: bolder;
+    
+}
+
+
+.table_wrapper{
+    
+    position: absolute;
+
+    display: flex;
+  
+    width: 100%;
+
+
+}
+
+.table_wrapper > :first-child{
+    left: 0;   
+}
+
+.table_wrapper > :not(:first-child){
+    left: 100%;   
+}
+
+.table_wrapper > *{
+    position: absolute;
+    top: 0;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+table{
+    width: 100%;
+
+    text-wrap: nowrap;
+    font-size: 20px;
+    text-align: center;
+
+    border-color: black; 
+    color: var(--nav-button-bgcolor--);
+    position:  relative;
+    background-color: var(--nav-bg-color--);
+  
+}
+table tbody{
+    position: relative;
+}
+table tbody > *{
+  
+    width: 100%;
+ 
+}
+
+table tr th{
+    background-color:  var(--nav-button-bgcolor--);
+    color: var(--table-td-bg-color--);
+    width: 100%;
+   
+}
+
+table tr td{
+    background-color:var(--table-td-bg-color--);
+   
+}
+
+
+
+.table_option{
+    background-color: aqua;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+table tr td{
+ 
+ 
+  
+    color: black;
+    position: relative;
+    height: 20%;
+  
+
+    
+}
+
+table tr th{
+    width: 14.3%;
+}
+
+
+
+
+
+
+.button button{
+    height: 40%;
+    width: 50%;
+    padding: 2%;
+    margin: 2%;
+    font-weight: bolder;
+    border-radius: 30px;
+    max-height: 30px;
+    font-size: 80%;
+    cursor: pointer;
+  
+    
+
+}
+
+.button button:active{
+    background-color: var(--nav-bg-color--);
+    outline: 1px solid var(--nav-button-bgcolor--);
+    color: var(--nav-button-bgcolor--);
+}
+
+.content_wrapper form > div input::-webkit-file-upload-button{
+    background-color:var(--nav-bg-color--);
+  
+    border: none;
+    color: var(--nav-button-bgcolor--);
+    height: 100%;
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bolder;
+
+
+    
+ 
+}
+
+table tr td form button{
+    padding: 2%;
+    margin: 2%;
+    background-color: var(--nav-button-bgcolor--);
+    color: var(--nav-bg-color--);
+    border: none;
+    border-radius: 10px;
+}
+
+.edit_button{
+    width: 50%;
+}
+
+.delete_button{
+    width: 50%;
+}
+
+table img{
+    width: 50%;
+    max-width: 75px;
+    max-height: 75px;
+    margin: 5% 0 5% 0;
+
+}
+
+
+#edit > div{
+    width: 80%;
+
+}
+
+
+
+/* Phone*/
+
+@media screen and (max-width: 767px) {
+
+    nav{
+        width: 20%;
+   
+    }
+    
+    nav > :first-child{
+        
+        height: 10%;
+    }
+
+    nav h1{
+        font-size: 80%;
+    }
+    nav > div:last-child button{
+        width: 80%;
+        height: 60%;
+        font-size: 10%;
+     }
+
+     .page_title h1{
+        font-size: 100%;
+     }
+
+     .content_wrapper form{
+        flex-direction: column;
+        height: 60%;
+        
+     }
+
+     .content_wrapper form > div{
+        width: 80%;
+        height: 15%;
+        border-radius: 3px;
+     }
+
+     .content_wrapper form > div label{
+        font-size: 70%;
+  
+    }
+    table{
+        font-size: 10px;
+    }
+
+
+    table tr td form  button{
+     min-width: 30px;
+     min-height: 20px;
+
+    }
+
+    .button button{
+        border-radius: 2px;
+        font-size: 50%;
+       
+    }
+
+    .choice select{
+        width: 40%;
+    }
+}
+
+
+
+
+/* Tablet*/
+@media screen and (min-width: 768px) and  (max-width: 1280px)   {
+
+    nav{
+        width: 20%;
+    }
+
+    nav h1{
+        font-size: 100%;
+    }
+    nav > div:last-child button{
+        width: 50%;
+        height: 50%;
+     }
+
+     .page_title h1{
+        font-size: 100%;
+     }
+
+     .content_wrapper form{
+        flex-direction: column;
+        height: 50%;
+     }
+
+     .content_wrapper form > div{
+        width: 80%;
+        height: 15%;
+        border-radius: 3px;
+     }
+
+     .content_wrapper form > div label{
+        font-size: 80%
+    }
+    table{
+        font-size: 10px;
+    }
+
+    table tr td form  button{
+        min-height: 50%;
+        border-radius: 1px;   
+    }
+
+    .button button{
+        border-radius: 15px;
+        font-size: 70%;
+        height: 15%;
+    }
+
+    #form_add{
+ 
+        min-height: 600px;
+    }
+
+    .content_wrapper form > div{
+        height: 15%;
+    }
+}
+
+/* Tablet landscape*/
+@media screen and (max-width: 932px) and (orientation:landscape){
+
+    nav{
+        width: 20%;
+   
+    }
+
+    nav > :first-child {
+     height: 20%;
+ 
+    }
+
+    nav > div:last-child button{
+        width: 40%;
+     
+   
+     }
+    
+
+    #form_add{
+ 
+        min-height: 600px;
+    }
+
+    .content_wrapper form > div{
+        height: 15%;
+    }
+
+    .content_wrapper form > div > input{
+      padding: 1%;
+    }
+
+    .content_wrapper form > div:last-child{
+ 
+        height: 10%;
+    }
+
+    .content_wrapper form input,.content_wrapper form select{
+        padding: 1%;
+    }
+
+    nav > :last-child button{
+        width: 80%;
+        height: 50%;
+     }
+
+    .button button{
+
+        min-height: 50%;
+        border-radius: 5px;
+    
+    }
+}
+
+@media screen and (min-width: 933px) and  (max-width: 1280px)  and (orientation:landscape) {
+
+    nav > div:last-child button{
+        width: 40%;
+    }
+
+    nav > div:not(:first-child,:last-child) svg{
+        width: 10%;
+    }
+
+    .content_wrapper form > div{
+        height: 15%;
+    }
+
+    .content_wrapper form > div > input{
+      padding: 1%;
+    }
+
+    .content_wrapper form > div:last-child{
+ 
+        height: 10%;
+    }
+
+    .content_wrapper form input,.content_wrapper form select{
+        padding: 1%;
+    }
+
+
+    
+
+
+}
